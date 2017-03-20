@@ -4,6 +4,7 @@
 function zendeskTrackingCode(host) {
   var scriptArray = [
     "<script>/*<![CDATA[*/",
+    "window.zESettings = { webWidget: { color: { theme: '#337ab7' } } };",
     "window.zEmbed||function(e,t){",
     "var n,o,d,i,s,a=[],r=document.createElement('iframe');window.zEmbed=function(){",
     "a.push(arguments)",
@@ -20,6 +21,7 @@ function zendeskTrackingCode(host) {
     "}('https://assets.zendesk.com/embeddable_framework/main.js',",
     "'" + host + "'",
     ");",
+    "zE(function() { zE.hide(); });",
     "/*]]>*/</script>"
   ];
   return scriptArray;
